@@ -1,0 +1,23 @@
+.margin {
+  margin-top: 21%;
+  margin-bottom: 5%;
+
+}
+
+.separar {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+h1, #margen {
+  margin-top: 20%;
+  font-size: 50px;
+  font-weight: 900;
+  color: #5F3040FF;
+}
+
+#margen {
+  margin-top: 8%;
+  margin-bottom: 5%;
+
+}
