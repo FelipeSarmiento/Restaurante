@@ -156,16 +156,34 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr>"
-      + "<td>" + cartArray[i].name + "</td>" 
-      + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td><div class='d-flex flex-row-reverse'><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-      + " = " 
-      + "<td>" + cartArray[i].total + "</td>" 
-      +  "</tr>";
+    output +=
+        "<div class='row row-cols-4 my-2 borde1'>" +
+          "<div class='col-6 col-lg-1 mt-2 fw-bold d-flex align-items-center justify-content-end'>" +
+            "<p>"+cartArray[i].name + "</p>" +
+          "</div>" +
+          "<div class='col-6 col-lg-1 mt-2 fst-italic d-flex align-items-center'>" +
+            "<p>$" + cartArray[i].price + "</p>" +
+          "</div>" +
+          "<div class='col-12 col-lg-7 mt-2 d-flex align-items-center'>" +
+            "<div class='input-group cantidad'>" +
+              "<button class='botones minus-item' data-name=" + cartArray[i].name + ">" +
+                "<i class=\"fas fa-minus\"></i>" +
+              "</button>" +
+              "<input type='number' class='item-count' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
+              "<button class='botones plus-item' data-name=" + cartArray[i].name + ">" +
+                "<i class=\"fas fa-plus\"></i>" +
+              "</button>" +
+              "<button class='botones delete-item' style='margin-left: 3px' data-name=" + cartArray[i].name + ">" +
+                "<i class=\"fas fa-times\"></i>" +
+              "</button>"+
+            "</div>" +
+          "</div>" +
+          "<div class='col-12 col-lg-3 row row-cols-2 d-flex final align-items-center mt-3 text-uppercase'>" +
+              "<div class='col'>Subtotal</div>" +
+              "<div>" + cartArray[i].total + "</div>" +
+          "</div>"
+          + "</div>";
+
   }
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart());
