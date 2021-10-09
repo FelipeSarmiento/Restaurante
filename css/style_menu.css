@@ -56,9 +56,37 @@ input.añadir {
 }
 
 .input-group {
-    width: 30%;
-    
-    background-color:#310101
+}
+input[type="number"] {
+    text-align: center;
+    -moz-appearance: textfield;
+    width: 12%;
+    border: 2px solid #310101;
+}
+.final {
+    justify-content: flex-end;
+}
+.botones {
+    width: 30px;
+    height: 30px;
+    font-size: 10pt;
+    text-align: center;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #310101;
+    border: 2px solid #310101;
+}
+.cantidad {
+    justify-content: center;
+}
+.borde1 {
+    border-bottom: 2px solid #310101;
+    padding-bottom: 6px;
+}
+@media screen and (min-width: 980px) {
+   .cantidad {
+       justify-content: flex-end;
+   }
 }
 .añadir2:hover{
     font-weight: bold;
@@ -101,4 +129,25 @@ input.añadir {
 }
 .titulo {
     color: #310101;
+}
+.pequeña {
+    display: block;
+}
+@media screen and (min-width: 920px){
+    .pequeña {
+        display: none;
+    }
+}
+.grande {
+    display: none;
+}
+@media screen and (min-width: 992px){
+    .grande {
+        display: block;
+    }
+}
+.botones2 {
+    background-color: transparent;
+    border: 1px solid #310101;
+    border-radius: 5%;
 }
