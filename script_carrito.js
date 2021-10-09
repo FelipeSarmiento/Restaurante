@@ -157,7 +157,7 @@ function displayCart() {
   var output = "";
   for(var i in cartArray) {
     output +=
-        "<div class='row row-cols-4 my-2 borde1'>" +
+        "<div class='row row-cols-4 my-2 mx-2 borde1'>" +
           "<div class='col-6 col-lg-1 mt-2 fw-bold d-flex align-items-center justify-content-end'>" +
             "<p>"+cartArray[i].name + "</p>" +
           "</div>" +
