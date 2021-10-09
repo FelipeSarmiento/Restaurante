@@ -58,16 +58,16 @@
       <li class="nav-item active">
         <a class="nav-link" href="reservas.html">Reservar</a>
       </li>
+      <li class="nav-item pequeña">
+            <a class="nav-link"  data-toggle="modal" data-target="#cart">Carrito de Compra  <i class="fas fa-shopping-cart" ></i></a>
+      </li>
     </ul>
   </div>
-  <div class="row">
+  <div class="row grande">
     <div class="col">
       <button class="añadir3"  data-toggle="modal" data-target="#cart"><i class="fas fa-shopping-cart" ></i></button>
-      
-      
-      
-      
-</div>
+    </div>
+  </div>
 </nav>
 
 <!-- end navbar-->
@@ -164,20 +164,20 @@
 <div class="modal-dialog modal-lg" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+      <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+      <button type="button" class="close botones" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="fas fa-times"></i></span>
       </button>
     </div>
     <div class="modal-body">
-      <table class="show-cart table">
+      <div class="show-cart">
         
-      </table>
-      <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div>Precio Total: $<span class="total-cart"></span></div>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Order now</button>
+      <button type="button" class="botones2" data-dismiss="modal">Cerrar</button>
+      <button type="button" class="botones2 fw-bold">Finalizar Pedido</button>
       
     </div>
   </div>
